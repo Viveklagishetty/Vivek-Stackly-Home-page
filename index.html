@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>document.documentElement.className += " js";</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0B2A25">
+  <title>Stackly | The farm marketplace where great finds meet the people who want them</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="loader">
+    <div class="loader-box">
+      <div class="loader-logo"><img src="logo-light.png" alt="Stackly"></div>
+      <div class="loader-track"><div id="loaderBar"></div></div>
+      <div class="loader-info"><span id="loaderText">Preparing the market...</span><span id="loaderPercent">0%</span></div>
+    </div>
+  </div>
+
+  <div id="topbar"></div>
+
+  <header>
+    <nav class="navbar container">
+      <a href="#/" class="logo"><img src="logo-light.png" alt="Stackly"></a>
+      <div class="nav-panel" id="navPanel">
+        <a href="#/" class="panel-logo"><img src="logo-light.png" alt="Stackly"></a>
+        <div class="nav-links-wrap"><span class="nav-blob" id="navBlob" aria-hidden="true"></span><ul class="nav-links" id="navLinks"><li><a href="#/"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2zM9 22V12h6v10"/></svg><span>Home</span></a></li><li><a href="#/about"><svg viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 16v-4M12 8h.01"/></svg><span>About</span></a></li><li><a href="#/services"><svg viewBox="0 0 24 24"><path d="M12 2l10 5-10 5L2 7zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><span>Services</span></a></li><li><a href="#/blog"><svg viewBox="0 0 24 24"><path d="M4 4h12l4 4v12H4zM16 4v4h4M8 12h8M8 16h8"/></svg><span>Blog</span></a></li><li><a href="#/contact"><svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zM22 6l-10 7L2 6"/></svg><span>Contact</span></a></li></ul></div>
+        <div class="nav-buttons">
+          <a href="#/login" class="btn outline guest-only"><svg viewBox="0 0 24 24"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg><span>Log in</span></a>
+          <a href="#/signup" class="btn dark guest-only"><svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM19 8v6M22 11h-6"/></svg><span>Sign up</span></a>
+          <a href="#/dashboard" id="spaceLink" class="btn outline user-only"><svg viewBox="0 0 24 24"><path d="M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z"/></svg><span id="spaceLabel">Dashboard</span></a>
+          <button id="logoutButton" class="btn dark user-only"><svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg><span>Log out</span></button>
+        </div>
+      </div>
+      <button id="menuButton" class="menu-button" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="home" class="page">
+
+      <section class="hero" id="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <i class="blob b1"></i><i class="blob b2"></i><i class="blob b3"></i><i class="glow" id="heroGlow"></i>
+          <svg class="leaf l1" viewBox="0 0 24 24"><path d="M12 2C6 6 4 12 6 18c6 0 12-4 12-12 0-1-.1-2-.3-3.4C15 2.6 13.5 2 12 2z"/></svg>
+          <svg class="leaf l2" viewBox="0 0 24 24"><path d="M12 2C6 6 4 12 6 18c6 0 12-4 12-12 0-1-.1-2-.3-3.4C15 2.6 13.5 2 12 2z"/></svg>
+          <svg class="leaf l3" viewBox="0 0 24 24"><path d="M12 2C6 6 4 12 6 18c6 0 12-4 12-12 0-1-.1-2-.3-3.4C15 2.6 13.5 2 12 2z"/></svg>
+          <svg class="leaf l4" viewBox="0 0 24 24"><path d="M12 2C6 6 4 12 6 18c6 0 12-4 12-12 0-1-.1-2-.3-3.4C15 2.6 13.5 2 12 2z"/></svg>
+          <svg class="leaf l5" viewBox="0 0 24 24"><path d="M12 2C6 6 4 12 6 18c6 0 12-4 12-12 0-1-.1-2-.3-3.4C15 2.6 13.5 2 12 2z"/></svg>
+          <svg class="leaf l6" viewBox="0 0 24 24"><path d="M12 2C6 6 4 12 6 18c6 0 12-4 12-12 0-1-.1-2-.3-3.4C15 2.6 13.5 2 12 2z"/></svg>
+        </div>
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <span class="pill"><i></i>3,200 new listings added this week</span>
+            <h1 data-split="words">Buy fresh, sell fair, <em>farm better.</em></h1>
+            <p>Stackly connects verified farmers with buyers in 96 districts. Pay through escrow, track every delivery, and read reviews from people who actually bought.</p>
+            <div class="button-row">
+              <a href="#/shop" class="btn accent">Start shopping <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+              <a href="#/how-it-works" class="btn ghost-light">See how it works</a>
+            </div>
+            <div class="proof">
+              <div class="avatars"><img src="images/avatar-1.jpg" alt="Farmer"><img src="images/avatar-2.jpg" alt="Farmer"><span style="background: #f4a52c">PN</span><span style="background: #2f9e6b">MR</span></div>
+              <div><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><small><b>4.9</b> from 38,000 reviews</small></div>
+            </div>
+          </div>
+          <div class="hero-collage" id="heroCollage">
+            <div class="orbit" aria-hidden="true"><i></i><i></i></div>
+            <div class="photo-main-wrap" data-depth="10"><img class="photo-main" src="images/plough-sunset.jpg" alt="A farmer ploughing at sunset with two white oxen while a woman carries a harvest bundle"><span class="shine"></span></div>
+            <div class="photo-small-wrap" data-depth="24"><img class="photo-small" src="images/farmer-wheat.jpg" alt="A smiling farmer in an orange turban crouching in a green wheat field"></div>
+            <div class="float-card fc1" data-depth="34"><span><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4"/></svg></span><div><b>Harvest verified</b><small>Checked by our field team</small></div></div>
+            <div class="float-card fc2" data-depth="20"><span><svg viewBox="0 0 24 24"><path d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4"/></svg></span><div><b>Escrow secured</b><small>&#8377;24,800 held safely</small></div></div>
+            <div class="float-card fc3" data-depth="28"><span><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><div><b>1,284 saves</b><small>Alphonso Mangoes</small></div></div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#brandsAnchor" aria-hidden="true" tabindex="-1"><i></i></a>
+      </section>
+
+      <div class="marquee"><div class="marquee-track"><span>Verified</span><span>Secure</span><span>Fast</span><span>Trusted</span><span>Verified</span><span>Secure</span><span>Fast</span><span>Trusted</span><span>Verified</span><span>Secure</span><span>Fast</span><span>Trusted</span><span>Verified</span><span>Secure</span><span>Fast</span><span>Trusted</span><span>Verified</span><span>Secure</span><span>Fast</span><span>Trusted</span><span>Verified</span><span>Secure</span><span>Fast</span><span>Trusted</span></div></div>
+
+      <section class="brands" id="brandsAnchor">
+        <div class="container">
+          <p class="brands-title">Home to independent farms and growing brands</p>
+        </div>
+        <div class="brand-row"><div class="brand-track"><span>Green Valley Farm</span><span>Sunrise Organics</span><span>Harvest Moon</span><span>Orchard Hill</span><span>Meadow Dairy</span><span>Rootwork Growers</span><span>Palm Grove</span><span>Hen & Hearth</span><span>Green Valley Farm</span><span>Sunrise Organics</span><span>Harvest Moon</span><span>Orchard Hill</span><span>Meadow Dairy</span><span>Rootwork Growers</span><span>Palm Grove</span><span>Hen & Hearth</span></div></div>
+      </section>
+
+      <section class="block">
+        <div class="container split">
+          <div class="split-art reveal">
+            <img class="art-big" src="images/banner-left.jpg" alt="Farmers holding fresh rice beside a tractor">
+            <img class="art-small" src="images/tractor-field.jpg" alt="A tractor spraying green crop rows">
+            <div class="art-badge"><b class="count" data-to="14">0</b><span>years building trust between farmers and families</span></div>
+          </div>
+          <div class="split-text reveal">
+            <span class="eyebrow">Why Stackly</span>
+            <h2>A marketplace built so both sides walk away happy.</h2>
+            <p>We started Stackly after watching farmers lose money on risky deals. Today every order is protected, every seller is checked, and every review comes from a real purchase.</p>
+            <ul class="points">
+              <li><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><h3>Sellers are verified</h3><p>ID, bank and farm-address checks before the first listing goes live.</p></div></li>
+              <li><svg viewBox="0 0 24 24"><path d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4"/></svg><div><h3>Money stays in escrow</h3><p>Sellers are paid only after you confirm the produce arrived as described.</p></div></li>
+              <li><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg><div><h3>Real people answer</h3><p>Our support team replies in under ten minutes, any day of the week.</p></div></li>
+            </ul>
+            <a href="#/services" class="btn dark">Explore our services <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="block tinted">
+        <div class="container">
+          <div class="head reveal center"><span class="eyebrow">Shop by aisle</span><h2>Six aisles. Thousands of farms.</h2><p class="head-text">Pick an aisle to step inside. Each one is curated weekly by our editors.</p></div>
+          <div class="aisles reveal"><a class="aisle" href="#/shop" style="--bg: #f6e7b8">
+            <svg viewBox="0 0 24 24"><path d="M7 20h10M12 20V10M12 10C12 6 9 4 5 4c0 4 2 6 7 6zM12 13c0-3 2-5 6-5 0 3-2 5-6 5z"/></svg>
+            <small>Grains</small>
+            <h3>Grains and pulses</h3>
+            <span>24,800 items</span>
+          </a><a class="aisle" href="#/shop" style="--bg: #d6efc8">
+            <svg viewBox="0 0 24 24"><path d="M12 21c-4 0-7-3-7-7 0-5 4-8 7-12 3 4 7 7 7 12 0 4-3 7-7 7zM12 9v8"/></svg>
+            <small>Vegetables</small>
+            <h3>Fresh vegetables</h3>
+            <span>31,500 items</span>
+          </a><a class="aisle" href="#/shop" style="--bg: #fbd9c9">
+            <svg viewBox="0 0 24 24"><path d="M12 7c-2-3-7-2-7 3 0 5 3 11 7 11s7-6 7-11c0-5-5-6-7-3zM12 7c0-2 1-4 3-5"/></svg>
+            <small>Fruits</small>
+            <h3>Seasonal fruits</h3>
+            <span>18,200 items</span>
+          </a><a class="aisle" href="#/shop" style="--bg: #d9ecf6">
+            <svg viewBox="0 0 24 24"><path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0z"/></svg>
+            <small>Dairy</small>
+            <h3>Dairy and eggs</h3>
+            <span>9,400 items</span>
+          </a><a class="aisle" href="#/shop" style="--bg: #fbe0b5">
+            <svg viewBox="0 0 24 24"><path d="M12 22c4 0 7-3 7-7 0-3-2-5-3-7-1 2-2 3-3 3 0-4-2-7-4-9 0 4-4 6-4 12 0 4 3 8 7 8z"/></svg>
+            <small>Spices</small>
+            <h3>Spices and herbs</h3>
+            <span>12,100 items</span>
+          </a><a class="aisle" href="#/shop" style="--bg: #e3e0d6">
+            <svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-.5-.5-2.5z"/></svg>
+            <small>Tools</small>
+            <h3>Farm tools</h3>
+            <span>15,700 items</span>
+          </a></div>
+        </div>
+      </section>
+
+      
+      <section class="block smart">
+        <div class="smart-bg" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="container smart-grid">
+          <div class="smart-text">
+            <span class="eyebrow">Smart farming</span>
+            <h2>Farms that think ahead, <em>markets that keep up.</em></h2>
+            <p>Drone surveys, soil readings and weather alerts flow straight into your Stackly listings, so buyers see what is really growing in your fields.</p>
+            <ul class="smart-points">
+              <li><span class="sp-ico"><svg viewBox="0 0 24 24"><path d="M10 12a2 2 0 1 0 4 0 2 2 0 0 0-4 0zM6 6l4 4M18 6l-4 4M6 18l4-4M18 18l-4-4M3 6h5M16 6h5M3 18h5M16 18h5"/></svg></span><div><h3>Drone-checked fields</h3><p>Aerial surveys confirm crop health before a listing goes live.</p></div></li>
+              <li><span class="sp-ico"><svg viewBox="0 0 24 24"><path d="M12 21V11M12 11C12 7 9 5 5 5c0 4 2 6 7 6zM12 14c0-3 2-5 6-5 0 3-2 5-6 5z"/></svg></span><div><h3>Soil insights, N-P-K</h3><p>Nitrogen, phosphorus and potassium readings shown beside every harvest.</p></div></li>
+              <li><span class="sp-ico"><svg viewBox="0 0 24 24"><path d="M12 3v2M4.2 7l1.4 1.4M19.8 7l-1.4 1.4M7 15a5 5 0 1 1 9.6-1.5A3.5 3.5 0 0 1 16.5 20H8a3 3 0 0 1-1-5z"/></svg></span><div><h3>Weather-smart timing</h3><p>Harvest and dispatch alerts so produce arrives at its freshest.</p></div></li>
+            </ul>
+            <a href="#/services" class="btn accent">Explore smart tools <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+          <div class="smart-art">
+            <div class="drone-frame" data-plx="0.05">
+              <img src="images/drone-farm.jpg" alt="A farmer controlling spraying drones over a rice field with live data panels">
+              <i class="scan" aria-hidden="true"></i>
+              <span class="blip b1" aria-hidden="true"></span><span class="blip b2" aria-hidden="true"></span><span class="blip b3" aria-hidden="true"></span>
+            </div>
+            <div class="hud-frame" data-plx="-0.07">
+              <img src="images/smart-farm.jpg" alt="A farmer tapping a tablet in a corn field with glowing soil and temperature icons">
+            </div>
+            <span class="npk n1">N</span><span class="npk n2">P</span><span class="npk n3">K</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="agriApps">
+        <div class="container split">
+          <div class="split-art reveal">
+            <img class="art-big" src="images/farmer-paddy.jpg" alt="A farmer spreading soil by hand in a green rice paddy">
+          </div>
+          <div class="split-text reveal">
+            <span class="eyebrow">Agriculture applications</span>
+            <h2>Modern farming, put to work in every field.</h2>
+            <p>From the first seed to the final sale, these practical methods help farmers grow more, waste less and reach buyers while the produce is still fresh.</p>
+            <ul class="points">
+              <li><svg viewBox="0 0 24 24"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20zM12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zM12 12h.01"/></svg><div><h3>Precision farming</h3><p>GPS-guided machinery and sensors place seed, water and fertiliser exactly where the crop needs them.</p></div></li>
+              <li><svg viewBox="0 0 24 24"><path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0z"/></svg><div><h3>Smart irrigation</h3><p>Drip systems and soil-moisture sensors water on demand, so less water is wasted.</p></div></li>
+              <li><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><div><h3>Integrated crop protection</h3><p>Early pest and disease scouting, with natural controls used before chemicals.</p></div></li>
+              <li><svg viewBox="0 0 24 24"><path d="M21 8l-9-5-9 5v8l9 5 9-5zM3 8l9 5 9-5M12 13v8"/></svg><div><h3>Post-harvest handling</h3><p>Grading, cold storage and clean packaging keep produce fresh all the way to the buyer.</p></div></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="stats-band">
+        <div class="container">
+          <h2 class="reveal">Buy. Sell. Repeat.</h2>
+          <div class="stat-grid">
+            <div><b class="count" data-to="52000" data-suffix="+">0</b><span>active buyers</span></div>
+            <div><b class="count" data-to="8400" data-suffix="+">0</b><span>verified farmers</span></div>
+            <div><b class="count" data-to="96">0</b><span>districts served</span></div>
+            <div><b class="count" data-to="4.9" data-decimals="1">0</b><span>average review score</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="block tinted" id="organicBenefits">
+        <div class="container split">
+          <div class="split-art reveal">
+            <img class="art-big" src="images/organic-seedling.jpg" alt="Two hands holding a young green seedling in fresh soil">
+          </div>
+          <div class="split-text reveal">
+            <span class="eyebrow">Organic food</span>
+            <h2>Why eating organic is worth it.</h2>
+            <p>Organic produce is grown without synthetic pesticides or chemical fertilisers. Here is what that can mean for you and for the land.</p>
+            <ul class="points">
+              <li><svg viewBox="0 0 24 24"><path d="M12 2C6 6 4 12 6 18c6 0 12-4 12-12 0-1-.1-2-.3-3.4C15 2.6 13.5 2 12 2z"/></svg><div><h3>Fewer chemical residues</h3><p>Less pesticide and fertiliser residue ends up on your plate.</p></div></li>
+              <li><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg><div><h3>Rich in natural goodness</h3><p>Some studies find higher antioxidant levels in organic fruits, vegetables and grains.</p></div></li>
+              <li><svg viewBox="0 0 24 24"><path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0z"/></svg><div><h3>Better for soil and water</h3><p>Organic methods build healthy soil and keep chemical run-off out of rivers and groundwater.</p></div></li>
+              <li><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg><div><h3>Supports local farmers</h3><p>Buying organic from verified growers helps small farms earn a fair price.</p></div></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="freshProduce">
+        <div class="container">
+          <div class="head reveal center"><span class="eyebrow">Fresh produce</span><h2>Buy and sell vegetables and organic food.</h2><p class="head-text">Shop straight from the farm, or list your own harvest and reach buyers across 96 districts.</p></div>
+          <div class="feature-cards reveal">
+            <article class="feature"><img src="images/veg-fresh.jpg" style="background: #e3e0d6" alt="A woven basket of fresh tomatoes, broccoli, peppers and other vegetables"><div><span class="f-icon"><svg viewBox="0 0 24 24"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4zM3 6h18M16 10a4 4 0 0 1-8 0"/></svg></span><h3>Fresh vegetables</h3><p>Tomatoes, carrots, brinjal, okra and more, picked and listed by verified farmers.</p><a href="#/shop">Buy now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></article>
+            <article class="feature"><img src="images/greens-herbs.jpg" style="background: #e3e0d6" alt="A basket of fresh lettuce, basil and other leafy greens and herbs"><div><span class="f-icon"><svg viewBox="0 0 24 24"><path d="M12 2C6 6 4 12 6 18c6 0 12-4 12-12 0-1-.1-2-.3-3.4C15 2.6 13.5 2 12 2z"/></svg></span><h3>Leafy greens and herbs</h3><p>Spinach, coriander, mint and fenugreek, harvested the same morning.</p><a href="#/shop">Buy now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></article>
+            <article class="feature"><img src="images/fruit-organic.jpg" style="background: #e3e0d6" alt="A basket of fresh apples, grapes, bananas, pineapple and oranges"><div><span class="f-icon"><svg viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></span><h3>Organic fruits</h3><p>Mangoes, bananas, guavas and seasonal fruit grown without synthetic pesticides.</p><a href="#/shop">Buy now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></article>
+            <article class="feature"><img src="images/grains-organic.jpg" style="background: #e3e0d6" alt="Bowls of rice, lentils, beans and chickpeas with wheat stalks"><div><span class="f-icon"><svg viewBox="0 0 24 24"><path d="M7 20h10M12 20V10M12 10C12 6 9 4 5 4c0 4 2 6 7 6zM12 13c0-3 2-5 6-5 0 3-2 5-6 5z"/></svg></span><h3>Organic grains and pulses</h3><p>Rice, millets, dals and wheat straight from certified organic farms.</p><a href="#/shop">Buy now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></article>
+            <article class="feature"><img src="images/spices-organic.jpg" style="background: #e3e0d6" alt="Bowls of turmeric, chilli powder and whole spices on a wooden table"><div><span class="f-icon"><svg viewBox="0 0 24 24"><path d="M12 22c4 0 7-3 7-7 0-3-2-5-3-7-1 2-2 3-3 3 0-4-2-7-4-9 0 4-4 6-4 12 0 4 3 8 7 8z"/></svg></span><h3>Organic spices</h3><p>Turmeric, chilli, pepper and cardamom, sun-dried and packed at source.</p><a href="#/shop">Buy now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></article>
+            <article class="feature"><img src="images/honey-dairy-organic.jpg" style="background: #e3e0d6" alt="Fresh milk, cheese and brown eggs on a wooden board"><div><span class="f-icon"><svg viewBox="0 0 24 24"><path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0z"/></svg></span><h3>Dairy and eggs</h3><p>Farm milk, cheese, ghee and free-range eggs from small producers.</p><a href="#/shop">Buy now <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div></article>
+          </div>
+          <div class="button-row center" style="margin-top: 40px">
+            <a href="#/shop" class="btn dark">Start buying <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+            <a href="#/start-selling" class="btn accent">Start selling <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="container cta-box reveal">
+          <div><h2>Tell us what you're selling, or what's gone wrong.</h2><p>We reply within ten minutes during support hours.</p></div>
+          <a href="#/contact" class="btn accent">Contact our team <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </section>
+
+    </section>
+
+    <section id="login" class="page au-page">
+      <div class="au-shell">
+        <aside class="au-left" aria-label="Stackly">
+          <div class="au-glow glow-a"></div><div class="au-glow glow-b"></div>
+          <div class="au-grid"></div>
+          <i class="au-ring ring-a"></i><i class="au-ring ring-b"></i><i class="au-ring ring-c"></i>
+          <div class="au-dots" aria-hidden="true"><i class="au-dot" style="--x:6%;--s:6px;--t:14s;--d:-2s"></i><i class="au-dot" style="--x:14%;--s:10px;--t:18s;--d:-9s"></i><i class="au-dot" style="--x:24%;--s:5px;--t:12s;--d:-5s"></i><i class="au-dot" style="--x:33%;--s:8px;--t:16s;--d:-12s"></i><i class="au-dot" style="--x:43%;--s:6px;--t:13s;--d:-7s"></i><i class="au-dot" style="--x:52%;--s:11px;--t:19s;--d:-1s"></i><i class="au-dot" style="--x:61%;--s:5px;--t:11s;--d:-10s"></i><i class="au-dot" style="--x:70%;--s:9px;--t:17s;--d:-4s"></i><i class="au-dot" style="--x:78%;--s:6px;--t:14s;--d:-13s"></i><i class="au-dot" style="--x:86%;--s:10px;--t:20s;--d:-6s"></i><i class="au-dot" style="--x:93%;--s:5px;--t:12s;--d:-8s"></i><i class="au-dot" style="--x:48%;--s:7px;--t:15s;--d:-15s"></i></div>
+          <a href="#/" class="au-logo"><img src="logo-light.png" alt="Stackly"></a>
+          <div class="au-chip chip-a"><span class="au-chip-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 6.5h11v9h-11zM13.5 9.5h4l3 3v3h-7"/><circle cx="7" cy="17.5" r="1.8"/><circle cx="17" cy="17.5" r="1.8"/></svg></span><span><strong>Order shipped</strong><small>Arrives Thursday</small></span></div>
+          <div class="au-chip chip-b"><span class="au-chip-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m8.8 12 2.3 2.3 4.2-4.6"/></svg></span><span><strong>Escrow secured</strong><small>&#8377;8,400 held safely</small></span></div>
+          <div class="au-hero">
+            <span class="au-eyebrow">Marketplace console</span>
+            <h2 data-split="words">Welcome back <br>to <em>Stackly.</em></h2>
+            <p>Log in to manage orders, listings and your inbox.</p>
+          </div>
+          <div class="au-rating"><span class="au-stars" aria-hidden="true"><span style="--i:0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.5l-6 3.4 1.3-6.7-5-4.7 6.8-.8z"/></svg></span><span style="--i:1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.5l-6 3.4 1.3-6.7-5-4.7 6.8-.8z"/></svg></span><span style="--i:2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.5l-6 3.4 1.3-6.7-5-4.7 6.8-.8z"/></svg></span><span style="--i:3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.5l-6 3.4 1.3-6.7-5-4.7 6.8-.8z"/></svg></span><span style="--i:4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.5l-6 3.4 1.3-6.7-5-4.7 6.8-.8z"/></svg></span></span><span>4.9 from 38,000 reviews</span></div>
+        </aside>
+        <div class="au-right">
+          <div class="au-top au-in" style="--k:0">
+            <a href="#/" class="au-back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>Back to home</span></a>
+            <p class="au-switch">New here? <a href="#/signup">Create an account</a></p>
+          </div>
+          <div class="au-form-wrap">
+            <h1 data-split="chars">Log in</h1>
+            <p class="au-sub au-in" style="--k:3">Pick your role, then enter your details.</p>
+            <form id="loginForm" class="au-form" novalidate>
+            <div class="au-roles au-in" style="--k:4" role="radiogroup">
+              <label class="au-role"><input type="radio" name="loginRole" value="admin"><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2.5 21a6.5 6.5 0 0 1 10-5.5"/><circle cx="18" cy="17.5" r="2.3"/><path d="M18 12.8v1.3M18 20.9v1.3M13.3 17.5h1.3M21.4 17.5h1.3"/></svg> Admin</span></label>
+              <label class="au-role"><input type="radio" name="loginRole" value="user" checked><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></svg> User</span></label>
+            </div>
+            <div class="au-field au-in" style="--k:5">
+              <input id="loginEmail" type="email" placeholder=" " autocomplete="email">
+              <label for="loginEmail">Email address</label>
+              <span class="au-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4 8 8 5.5L20 8"/></svg></span>
+              <div class="au-error" id="loginEmailError" role="alert"></div>
+            </div>
+            <div class="au-field au-in" style="--k:6">
+              <input id="loginPassword" type="password" placeholder=" " autocomplete="current-password">
+              <label for="loginPassword">Password</label>
+              <button type="button" class="au-eye" data-target="loginPassword" aria-label="Show password"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.8-7 10-7 10 7 10 7-3.8 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path class="slash" d="M4 4l16 16"/></svg></button>
+              <div class="au-error" id="loginPasswordError" role="alert"></div>
+            </div>
+            <div class="au-row au-in" style="--k:7"><button type="button" class="au-forgot" id="forgotButton">Forgot password?</button></div>
+            <button type="submit" class="au-btn au-in" style="--k:8"><span>Log in</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </form>
+            <div class="au-demo au-in" style="--k:9"><span>Demo accounts:</span><button type="button" data-demo="admin">Admin</button><button type="button" data-demo="user">User</button></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="signup" class="page au-page">
+      <div class="au-shell">
+        <aside class="au-left" aria-label="Stackly">
+          <div class="au-glow glow-a"></div><div class="au-glow glow-b"></div>
+          <div class="au-grid"></div>
+          <i class="au-ring ring-a"></i><i class="au-ring ring-b"></i><i class="au-ring ring-c"></i>
+          <div class="au-dots" aria-hidden="true"><i class="au-dot" style="--x:6%;--s:6px;--t:14s;--d:-2s"></i><i class="au-dot" style="--x:14%;--s:10px;--t:18s;--d:-9s"></i><i class="au-dot" style="--x:24%;--s:5px;--t:12s;--d:-5s"></i><i class="au-dot" style="--x:33%;--s:8px;--t:16s;--d:-12s"></i><i class="au-dot" style="--x:43%;--s:6px;--t:13s;--d:-7s"></i><i class="au-dot" style="--x:52%;--s:11px;--t:19s;--d:-1s"></i><i class="au-dot" style="--x:61%;--s:5px;--t:11s;--d:-10s"></i><i class="au-dot" style="--x:70%;--s:9px;--t:17s;--d:-4s"></i><i class="au-dot" style="--x:78%;--s:6px;--t:14s;--d:-13s"></i><i class="au-dot" style="--x:86%;--s:10px;--t:20s;--d:-6s"></i><i class="au-dot" style="--x:93%;--s:5px;--t:12s;--d:-8s"></i><i class="au-dot" style="--x:48%;--s:7px;--t:15s;--d:-15s"></i></div>
+          <a href="#/" class="au-logo"><img src="logo-light.png" alt="Stackly"></a>
+          <div class="au-chip chip-a"><span class="au-chip-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 5-14 15-14 0 10-6 15-14 15"/><path d="M5 19c3-5 6-8 10-10"/></svg></span><span><strong>Free to join</strong><small>No credit card needed</small></span></div>
+          <div class="au-chip chip-b"><span class="au-chip-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m8.8 12 2.3 2.3 4.2-4.6"/></svg></span><span><strong>Verified sellers</strong><small>Trusted by 8,420 farmers</small></span></div>
+          <div class="au-hero">
+            <span class="au-eyebrow">Join the marketplace</span>
+            <h2 data-split="words">Start buying <br>and <em>selling.</em></h2>
+            <p>Join thousands of farmers and families on Stackly.</p>
+          </div>
+          <div class="au-rating"><span class="au-stars" aria-hidden="true"><span style="--i:0"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.5l-6 3.4 1.3-6.7-5-4.7 6.8-.8z"/></svg></span><span style="--i:1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.5l-6 3.4 1.3-6.7-5-4.7 6.8-.8z"/></svg></span><span style="--i:2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.5l-6 3.4 1.3-6.7-5-4.7 6.8-.8z"/></svg></span><span style="--i:3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.5l-6 3.4 1.3-6.7-5-4.7 6.8-.8z"/></svg></span><span style="--i:4"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2.5 2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.5l-6 3.4 1.3-6.7-5-4.7 6.8-.8z"/></svg></span></span><span>4.9 from 38,000 reviews</span></div>
+        </aside>
+        <div class="au-right">
+          <div class="au-top au-in" style="--k:0">
+            <a href="#/" class="au-back"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span>Back to home</span></a>
+            <p class="au-switch">Already a member? <a href="#/login">Log in</a></p>
+          </div>
+          <div class="au-form-wrap">
+            <h1 data-split="chars">Create account</h1>
+            <p class="au-sub au-in" style="--k:3">It takes less than a minute.</p>
+            <form id="signupForm" class="au-form" novalidate>
+            <div class="au-roles au-in" style="--k:4" role="radiogroup">
+              <label class="au-role"><input type="radio" name="signupRole" value="admin"><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M2.5 21a6.5 6.5 0 0 1 10-5.5"/><circle cx="18" cy="17.5" r="2.3"/><path d="M18 12.8v1.3M18 20.9v1.3M13.3 17.5h1.3M21.4 17.5h1.3"/></svg> Admin</span></label>
+              <label class="au-role"><input type="radio" name="signupRole" value="user" checked><span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></svg> User</span></label>
+            </div>
+            <div class="au-field au-in" style="--k:5">
+              <input id="signupName" type="text" placeholder=" " autocomplete="name">
+              <label for="signupName">Full name</label>
+              <span class="au-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21a7.5 7.5 0 0 1 15 0"/></svg></span>
+              <div class="au-error" id="signupNameError" role="alert"></div>
+            </div>
+            <div class="au-field au-in" style="--k:6">
+              <input id="signupEmail" type="email" placeholder=" " autocomplete="email">
+              <label for="signupEmail">Email address</label>
+              <span class="au-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="5.5" width="17" height="13" rx="2.5"/><path d="m4 8 8 5.5L20 8"/></svg></span>
+              <div class="au-error" id="signupEmailError" role="alert"></div>
+            </div>
+            <div class="au-field au-in" style="--k:7">
+              <input id="signupPassword" type="password" placeholder=" " autocomplete="new-password">
+              <label for="signupPassword">Password (at least 8 characters)</label>
+              <button type="button" class="au-eye" data-target="signupPassword" aria-label="Show password"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.8-7 10-7 10 7 10 7-3.8 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/><path class="slash" d="M4 4l16 16"/></svg></button>
+              <div class="au-error" id="signupPasswordError" role="alert"></div>
+            </div>
+            <button type="submit" class="au-btn au-in" style="--k:8"><span>Create account</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="page">
+      <div class="ad-shell">
+        <aside class="ad-side">
+          <a href="#/" class="ad-logo"><img src="logo-light.png" alt="Stackly"></a>
+          <span class="ad-badge">USER</span>
+          <nav class="ad-nav" aria-label="User">
+            <a href="#/dashboard" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Overview</span></a>
+            <a href="#/404"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Inbox</span><b class="ad-count">2</b></a>
+            <a href="#/404"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l1 12H5z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg><span>My orders</span></a>
+            <a href="#/404"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-8-4.800-8-10.500A4.500 4.500 0 0 1 12 7a4.500 4.500 0 0 1 8 2.500C20 15.200 12 20 12 20z"/></svg><span>Wishlist</span></a>
+            <a href="#/404"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/></svg><span>Wallet</span></a>
+            <a href="#/404"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span>Settings</span></a>
+          </nav>
+          <div class="ad-foot">
+            <a href="#/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Back to home</span></a>
+            <button type="button" id="userLogout"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg><span>Log out</span></button>
+          </div>
+        </aside>
+        <main class="ad-main">
+          <div class="ad-top">
+            <label class="ad-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="search" placeholder="Search emails..." aria-label="Search emails"></label>
+            <div class="ad-user"><span class="ad-avatar" id="userAvatar">A</span><div><strong id="userUserName">User</strong><small>User</small></div></div>
+          </div>
+          <p class="ad-eyebrow">Dashboard</p>
+          <div class="ad-hero">
+            <div>
+              <h1>Hello,<br><em id="userHeroName">User.</em></h1>
+              <p>Your orders, wishlist and messages are all here.</p>
+            </div>
+            <a href="#/404" class="ad-open">Open inbox <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <h2 class="ad-h2">Key metrics</h2>
+          <div class="ad-metrics">
+            <div class="ad-metric"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l1 12H5z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></i><b>12</b><span>Orders</span><small>2 on the way</small></div>
+            <div class="ad-metric"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-8-4.800-8-10.500A4.500 4.500 0 0 1 12 7a4.500 4.500 0 0 1 8 2.500C20 15.200 12 20 12 20z"/></svg></i><b>27</b><span>Wishlist</span><small>3 price drops</small></div>
+            <div class="ad-metric"><i><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><path d="M3 10h18M16 15h2"/></svg></i><b>$142</b><span>Wallet</span><small>Cashback ready</small></div>
+            <div class="ad-metric"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.800 5.800 6.200.9-4.500 4.400 1.100 6.200L12 17.300 6.400 20.300l1.100-6.200L3 9.700l6.200-.9z"/></svg></i><b>9</b><span>Reviews</span><small>Helpful to 214</small></div>
+          </div>
+          <h2 class="ad-h2">Performance and latest emails</h2>
+          <div class="ad-cols">
+            <div class="ad-card"><h3>Your spending, last 12 months</h3>
+              <div class="ad-bars" aria-label="Monthly sales bar chart">
+                <span style="--h:38%"><em>Nov</em></span><span style="--h:46%"><em>Dec</em></span><span style="--h:42%"><em>Jan</em></span><span style="--h:55%"><em>Feb</em></span><span style="--h:60%"><em>Mar</em></span><span style="--h:52%"><em>Apr</em></span><span style="--h:68%"><em>May</em></span><span style="--h:74%"><em>Jun</em></span><span style="--h:70%"><em>Jul</em></span><span style="--h:82%"><em>Aug</em></span><span style="--h:88%"><em>Sep</em></span><span style="--h:96%"><em>Oct</em></span>
+              </div>
+            </div>
+            <div class="ad-card"><h3>Latest emails <a href="#/404">View all</a></h3>
+              <ul class="ad-mails">
+                <li><b>Green Valley Farm</b><span>Your order has shipped</span></li>
+                <li><b>Stackly Deals</b><span>Price drop on your wishlist</span></li>
+                <li><b>Stackly Wallet</b><span>Cashback added to your wallet</span></li>
+              </ul>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <section id="admin" class="page">
+      <div class="ad-shell">
+        <aside class="ad-side">
+          <a href="#/" class="ad-logo"><img src="logo-light.png" alt="Stackly"></a>
+          <span class="ad-badge">ADMIN</span>
+          <nav class="ad-nav" aria-label="Admin">
+            <a href="#/admin" class="active"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Overview</span></a>
+            <a href="#/404"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Inbox</span><b class="ad-count">3</b></a>
+            <a href="#/404"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14a5 5 0 0 1 4.5 5"/></svg><span>Users</span></a>
+            <a href="#/404"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M7 15l4-5 3 3 5-7"/></svg><span>Analytics</span></a>
+            <a href="#/404"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-5 9 5v9l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v9"/></svg><span>Listings</span></a>
+            <a href="#/404"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg><span>Settings</span></a>
+          </nav>
+          <div class="ad-foot">
+            <a href="#/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg><span>Back to home</span></a>
+            <button type="button" id="adminLogout"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg><span>Log out</span></button>
+          </div>
+        </aside>
+        <main class="ad-main">
+          <div class="ad-top">
+            <label class="ad-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="search" placeholder="Search emails..." aria-label="Search emails"></label>
+            <div class="ad-user"><span class="ad-avatar" id="adminAvatar">A</span><div><strong id="adminUserName">Admin</strong><small>Admin</small></div></div>
+          </div>
+          <p class="ad-eyebrow">Dashboard</p>
+          <div class="ad-hero">
+            <div>
+              <h1>Hello,<br><em id="adminHeroName">Admin.</em></h1>
+              <p>Here is what is happening across the marketplace today.</p>
+            </div>
+            <a href="#/404" class="ad-open">Open inbox <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+          <h2 class="ad-h2">Key metrics</h2>
+          <div class="ad-metrics">
+            <div class="ad-metric"><i><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14a5 5 0 0 1 4.5 5"/></svg></i><b>1,242</b><span>Total users</span><small>+12% this month</small></div>
+            <div class="ad-metric"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v20M17 6.5C16 5 14.200 4.500 12 4.500c-3 0-5 1.300-5 3.500s2 3 5 3.500 5 1.300 5 3.500-2 3.500-5 3.500c-2.400 0-4.400-.7-5.500-2.300"/></svg></i><b>$84.2K</b><span>Revenue</span><small>+8.4% this week</small></div>
+            <div class="ad-metric"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l9-5 9 5v9l-9 5-9-5z"/><path d="M3 8l9 5 9-5M12 13v9"/></svg></i><b>3,912</b><span>Orders</span><small>+5.1% today</small></div>
+            <div class="ad-metric"><i><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><rect x="3" y="14" width="4" height="6" rx="1.500"/><rect x="17" y="14" width="4" height="6" rx="1.500"/></svg></i><b>18</b><span>Open tickets</span><small>4 need a reply</small></div>
+          </div>
+          <h2 class="ad-h2">Performance and latest emails</h2>
+          <div class="ad-cols">
+            <div class="ad-card"><h3>Sales, last 12 months</h3>
+              <div class="ad-bars" aria-label="Monthly sales bar chart">
+                <span style="--h:38%"><em>Nov</em></span><span style="--h:46%"><em>Dec</em></span><span style="--h:42%"><em>Jan</em></span><span style="--h:55%"><em>Feb</em></span><span style="--h:60%"><em>Mar</em></span><span style="--h:52%"><em>Apr</em></span><span style="--h:68%"><em>May</em></span><span style="--h:74%"><em>Jun</em></span><span style="--h:70%"><em>Jul</em></span><span style="--h:82%"><em>Aug</em></span><span style="--h:88%"><em>Sep</em></span><span style="--h:96%"><em>Oct</em></span>
+              </div>
+            </div>
+            <div class="ad-card"><h3>Latest emails <a href="#/404">View all</a></h3>
+              <ul class="ad-mails">
+                <li><b>Lakshmi Devi</b><span>Payout for last week's wheat order</span></li>
+                <li><b>Ramesh Reddy</b><span>Listing flagged for review</span></li>
+                <li><b>Anjali Sharma</b><span>Question about escrow release</span></li>
+              </ul>
+            </div>
+          </div>
+        </main>
+      </div>
+    </section>
+
+    <section id="notfound" class="page">
+      <div class="notfound-box">
+        <div class="nf-sky" aria-hidden="true">
+          <span class="cloud c1"></span><span class="cloud c2"></span><span class="cloud c3"></span>
+          <b class="pollen p1"></b><b class="pollen p2"></b><b class="pollen p3"></b><b class="pollen p4"></b><b class="pollen p5"></b><b class="pollen p6"></b>
+        </div>
+
+        <div class="nf-content">
+          <div class="big-404" role="img" aria-label="404">
+            <span class="digit d1">4</span>
+            <span class="digit d2"><svg viewBox="0 0 120 120"><g class="sun-rays"><path d="M60 4v16M60 100v16M4 60h16M100 60h16M20 20l11 11M89 89l11 11M100 20L89 31M31 89L20 100"/></g><circle class="sun-core" cx="60" cy="60" r="30"/><circle class="sun-eye" cx="50" cy="56" r="3.4"/><circle class="sun-eye" cx="70" cy="56" r="3.4"/><path class="sun-smile" d="M48 68q12 11 24 0"/></svg></span>
+            <span class="digit d3">4</span>
+          </div>
+          <h1>Oops! This page is out of stock</h1>
+          <p>We couldn't find <code id="badPath"></code>. It may have moved or never existed.</p>
+          <div class="button-row center">
+            <button id="goBackButton" class="btn outline"><svg class="bk" viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg> Go back</button>
+            <a href="#/" class="btn dark">Back to home <svg class="fw" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </div>
+        </div>
+
+        <div class="nf-field" aria-hidden="true">
+          <div class="wheat"><i style="--x:2%;--h:70px;--d:0.0s"></i><i style="--x:6%;--h:90px;--d:0.4s"></i><i style="--x:10%;--h:64px;--d:0.9s"></i><i style="--x:15%;--h:100px;--d:0.2s"></i><i style="--x:19%;--h:76px;--d:0.7s"></i><i style="--x:24%;--h:92px;--d:1.1s"></i><i style="--x:29%;--h:68px;--d:0.3s"></i><i style="--x:34%;--h:98px;--d:0.8s"></i><i style="--x:62%;--h:72px;--d:0.5s"></i><i style="--x:66%;--h:96px;--d:1.0s"></i><i style="--x:71%;--h:66px;--d:0.1s"></i><i style="--x:76%;--h:100px;--d:0.6s"></i><i style="--x:81%;--h:78px;--d:1.2s"></i><i style="--x:86%;--h:92px;--d:0.3s"></i><i style="--x:91%;--h:70px;--d:0.8s"></i><i style="--x:96%;--h:88px;--d:0.1s"></i></div>
+          <div class="tractor">
+            <svg viewBox="0 0 170 110">
+              <g class="smoke"><circle cx="30" cy="14" r="5"/><circle cx="26" cy="6" r="4"/><circle cx="32" cy="-2" r="3"/></g>
+              <rect x="26" y="20" width="7" height="22" rx="2" fill="#4a5a55"/>
+              <path d="M30 44h62l10 14h30v22H30z" fill="#2f9e6b"/>
+              <rect x="34" y="40" width="58" height="14" rx="5" fill="#27895c"/>
+              <path d="M88 20h34l6 36H84z" fill="#f4a52c"/>
+              <path d="M94 26h22l4 24H92z" fill="#cfeaf5"/>
+              <rect x="84" y="14" width="46" height="8" rx="4" fill="#d98a14"/>
+              <g transform="translate(112 78)"><g class="wheel big"><circle r="27" fill="#16322d"/><circle r="17" fill="#f4a52c"/><path d="M0-17V17M-17 0H17M-12-12L12 12M12-12L-12 12" stroke="#16322d" stroke-width="3"/><circle r="5" fill="#16322d"/></g></g>
+              <g transform="translate(46 90)"><g class="wheel small"><circle r="16" fill="#16322d"/><circle r="9" fill="#f4a52c"/><path d="M0-9V9M-9 0H9" stroke="#16322d" stroke-width="3"/><circle r="3" fill="#16322d"/></g></g>
+            </svg>
+          </div>
+          <div class="soil"></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-wave" aria-hidden="true"><svg class="w1" viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 40Q180 0 360 40T720 40T1080 40T1440 40V80H0Z"/></svg><svg class="w2" viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0 40Q180 80 360 40T720 40T1080 40T1440 40V80H0Z"/></svg></div>
+    <div class="container footer-join">
+      <div>
+        <span class="eyebrow">The Stackly edit</span>
+        <h2>Good finds, <em>straight to your inbox.</em></h2>
+        <p>Get fresh picks, seasonal offers and stories from our community.</p>
+      </div>
+      <form id="newsletterForm" class="newsletter-form">
+        <label class="sr-only" for="newsletterEmail">Your email address</label>
+        <input id="newsletterEmail" type="email" placeholder="you@example.com" required>
+        <button class="btn accent" type="submit">Join the list <span aria-hidden="true">&rarr;</span></button>
+        <small id="newsletterStatus" aria-live="polite">No spam. Unsubscribe whenever you like.</small>
+      </form>
+    </div>
+    <div class="container footer-grid">
+      <div class="footer-about">
+        <img class="footer-logo" src="logo-light.png" alt="Stackly">
+        <p>The marketplace where great farm finds meet the people who want them.</p>
+        <div class="social-icons"><a href="#/facebook" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a><a href="#/x" aria-label="X"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg></a><a href="#/instagram" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zM16 11.4A4 4 0 1 1 12.6 8 4 4 0 0 1 16 11.4zM17.5 6.5h.01"/></svg></a><a href="#/linkedin" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/></svg></a><a href="#/youtube" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22.5 6.4a2.8 2.8 0 0 0-2-2C18.8 4 12 4 12 4s-6.8 0-8.5.4a2.8 2.8 0 0 0-2 2C1 8.1 1 12 1 12s0 3.9.5 5.6a2.8 2.8 0 0 0 2 2C5.2 20 12 20 12 20s6.8 0 8.5-.4a2.8 2.8 0 0 0 2-2c.5-1.7.5-5.6.5-5.6s0-3.9-.5-5.6zM9.75 15.02V8.98L15 12z"/></svg></a></div>
+      </div>
+      <div><h4>Marketplace</h4><ul class="footer-list"><li><a href="#/categories">Categories</a></li><li><a href="#/how-it-works">How it works</a></li></ul></div>
+      <div><h4>Company</h4><ul class="footer-list"><li><a href="#/">Home</a></li><li><a href="#/about">About</a></li><li><a href="#/services">Services</a></li><li><a href="#/blog">Blog</a></li><li><a href="#/contact">Contact</a></li></ul></div>
+      <div>
+        <h4>Find us</h4>
+        <address>100 Feet Road, Jayasudha Heights Building<br>Madhapur, Hyderabad,<br>Telangana 500082, India</address>
+        <p class="hours">Mon - Sat, 9 AM - 6 PM</p>
+        <a class="btn accent small" target="_blank" rel="noopener" href="https://www.google.com/maps/place/Jayasudha+heights+building,+Jaya+Sudha+Heights,+ysr+statue,+Chanda+Naik+Nagar,+Madhapur,+Hyderabad,+Telangana/@17.4521539,78.3882896,17z/data=!4m5!3m4!1s0x3bcb91641a90ec67:0x94396fa04c7a04d3!8m2!3d17.4522976!4d78.3907222?entry=ttu&g_ep=EgoyMDI2MTAxMy4wIKXMDSoASAFQAw%3D%3D">Open in Google Maps</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>&copy; 2026 Stackly Inc. All rights reserved.</span>
+      <span><a href="#/privacy">Privacy</a><a href="#/terms">Terms</a><a href="#/cookies">Cookies</a></span>
+    </div>
+  </footer>
+
+  <button id="toTop" class="to-top" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
